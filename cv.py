@@ -40,12 +40,16 @@ out.write(frame)
 #break
 
 c = b''
+lista = []
 for ll in frame:
     for l in ll:
-        t = l.tolist() + [255]
-        for tt in t:
-            c = c.join(str(tt))
-data = c
+        d = l.tolist() + [255]
+        for i in d:
+            lista.append('%c' % i)
+        #for tt in t:
+        #    c = c.join(str(tt))
+data = b''.join(lista)
+print data
 png = write_png(data, 1280, 720)
 f = open('foto.png', 'w')
 f.write(png)
