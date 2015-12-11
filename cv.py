@@ -43,14 +43,13 @@ c = b''
 lista = []
 for ll in frame:
     for l in ll:
-        d = l.tolist() + [255]
-        for i in d:
+        d =  [255] + l.tolist()
+        for i in d[::-1]:
             lista.append('%c' % i)
         #for tt in t:
         #    c = c.join(str(tt))
 data = b''.join(lista)
-print data
-png = write_png(data, 1280, 720)
+png = write_png(data, 640, 480)
 f = open('foto.png', 'w')
 f.write(png)
 
