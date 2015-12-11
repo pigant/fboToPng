@@ -13,5 +13,26 @@
         text: 'func'
         on_press: root.llorar()
 
-FloatLayout:
+Camara:
+    camera: _c
     Tabla:
+    Camera:
+        id: _c
+        play: True
+        resolution: (640, 480)
+        size_hint: 0.5, 0.5
+        pos_hint: {'right': 1}
+    Button:
+        text: 'Camara'
+        size_hint: 0.2, 0.2
+        pos_hint: {'right': 1, 'top': 1}
+        on_press: root.mostrarCamara()
+    #Camera:
+    #    id: camera
+    #    resolution: (640, 480)
+    #    play: False
+    #ToggleButton:
+    #    text: 'Play'
+    #    on_press: camera.play = not camera.play
+    #    size_hint_y: None
+    #    height: '48dp'
